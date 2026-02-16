@@ -1,0 +1,31 @@
+#!/bin/bash
+
+set -ueo pipefail
+#set -x
+
+# SCRIPT_DIR=$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+
+echo $SCRIPT_DIR
+
+for RCFILE in .bashrc .inputrc .screenrc .vimrc
+do
+	SRC_RC_FILE="${SCRIPT_DIR}/vonahsen${RCFILE}"
+	DST_RC_FILE="${HOME}/${RCFILE}"
+	if [[ -e "${SRC_RC_FILE}" ]]
+	then
+		echo "source $SRC_RC_FILE exists"
+		if [[ -e "${DST_RC_FILE}" && $(grep "${SRC_RC_FILE}" "${DST_RC_FILE}") ]]
+		then
+			echo "${DST_RC_FILE} alrady configured"
+		else
+			if [[ "${RCFILE}" == ".inputrc" ]]
+			then
+				echo "\$include $SRC_RC_FILE" >> $DST_RC_FILE
+			else
+				echo "source $SRC_RC_FILE" >> $DST_RC_FILE
+			fi
+		fi
+	fi
+done
