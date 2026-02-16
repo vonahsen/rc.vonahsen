@@ -1,4 +1,10 @@
-startup_message off
-vbell on
-defscrollback 1024
+startup_message off                     # Turn off the splash screen
+shell                 bash              # default startup shell
+shelltitle ''
+vbell off                               # disable visual bell
+termcapinfo xterm-color ti@:te@         # Allow terminal scrolling
+defscrollback 10000                     # large scroll back
+
+hardstatus alwayslastline
+hardstatus string  '%{= Kw}%-Lw%{=b bW}%50>%n: %t%{= Kw}%+Lw%< %{= kG}%-=%D %d %M %Y %c:%s%{-}'
 
