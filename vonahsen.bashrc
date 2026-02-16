@@ -26,6 +26,3 @@ export PROMPT_COMMAND="history -a; history -n"
 
 HISTTIMEFORMAT="%Y/%m/%d %T "
 
-
-export PATH=$PATH:/home/barry/android/platform-tools
-
