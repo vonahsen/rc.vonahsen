@@ -23,7 +23,8 @@ else
 	gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'LEFT'
 	gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
 	gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
-	gsettings set org.gnome.shell.extensions.dash-to-dock intellihide true
+	# disable "dodge windows" - true = only hide if interfering with an app window
+	gsettings set org.gnome.shell.extensions.dash-to-dock intellihide false
 
 fi
 
