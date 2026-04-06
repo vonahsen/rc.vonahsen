@@ -19,7 +19,7 @@ if [ ! $? ]
 then
 	echo "must install gnome-shell-extension-dashtodock"
 else
-	gsettings set org.gnome.shell enabled-extensions "['dash-to-dock@micxgx.gmail.com']"
+	gnome-extensions enable dash-to-dock@micxgx.gmail.com
 	gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'LEFT'
 	gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
 	gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
@@ -27,3 +27,11 @@ else
 
 fi
 
+# show desktop icons
+dpkg -s gnome-shell-extension-desktop-icons-ng 2>&1 >/dev/null
+if [ ! $? ]
+then
+	echo "must install gnome-shell-extension-desktop-icons-ng"
+else
+	gnome-extensions enable ding@rastersoft.com
+fi
