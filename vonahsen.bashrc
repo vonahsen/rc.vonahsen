@@ -1,9 +1,9 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-export EDITOR=vim
-export SVN_EDITOR=vim
-export GIT_EDITOR=vim
+export EDITOR=vi
+export SVN_EDITOR=vi
+export GIT_EDITOR=vi
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
