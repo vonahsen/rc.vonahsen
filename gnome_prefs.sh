@@ -36,3 +36,6 @@ then
 else
 	gnome-extensions enable ding@rastersoft.com
 fi
+
+# show logout icon in power/shutdown menu
+gsettings set org.gnome.shell always-show-log-out true
