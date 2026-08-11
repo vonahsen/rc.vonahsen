@@ -9,7 +9,7 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 echo $SCRIPT_DIR
 
-for RCFILE in .bashrc .bash_logout .inputrc .screenrc .vimrc
+for RCFILE in .bashrc .bash_logout .inputrc .project .screenrc .vimrc
 do
 	SRC_RC_FILE="${SCRIPT_DIR}/vonahsen${RCFILE}"
 	DST_RC_FILE="${HOME}/${RCFILE}"
