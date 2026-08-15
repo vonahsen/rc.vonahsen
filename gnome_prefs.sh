@@ -14,7 +14,7 @@ gsettings set org.gnome.desktop.interface clock-format '24h'
 
 # dash/dock
 # check installed
-dpkg -s gnome-shell-extension-dashtodock 2>&1 >/dev/null
+dpkg -s gnome-shell-extension-dashtodock >/dev/null 2>&1
 if [ ! $? ]
 then
 	echo "must install gnome-shell-extension-dashtodock"
@@ -29,7 +29,7 @@ else
 fi
 
 # show desktop icons
-dpkg -s gnome-shell-extension-desktop-icons-ng 2>&1 >/dev/null
+dpkg -s gnome-shell-extension-desktop-icons-ng >/dev/null 2>&1
 if [ ! $? ]
 then
 	echo "must install gnome-shell-extension-desktop-icons-ng"

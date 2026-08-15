@@ -1,0 +1,5 @@
+#! /bin/bash
+# probably redundant, but shuts shellcheck up
+
+# why systemd, why...
+alias reboot='/usr/bin/systemctl reboot -i'
