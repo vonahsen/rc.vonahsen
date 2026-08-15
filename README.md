@@ -16,10 +16,15 @@ set_locale.sh
 * attempt to set locale info, since Rasbpian is so UK-centric :)
 
 vonahsen.bash_logout
+
 vonahsen.bashrc
+
 vonahsen.inputrc
+
 vonahsen.plan
+
 vonahsen.screenrc
+
 vonahsen.vimrc
 
 ## vonahsen.bashrc.d
