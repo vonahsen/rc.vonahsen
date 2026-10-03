@@ -3,3 +3,4 @@
 
 # why systemd, why...
 alias reboot='/usr/bin/systemctl reboot -i'
+alias shutdown='/usr/bin/systemctl poweroff -i'
