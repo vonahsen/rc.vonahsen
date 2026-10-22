@@ -1,0 +1,14 @@
+[user]
+	name = Barry Von Ahsen
+	email = barry@vonahsen.com
+[core]
+	autocrlf = input
+	safecrlf = false
+[blame]
+	date = format:"%Y-%m-%d %H:%I:%S"
+[log]
+	date = format:"%Y-%m-%d %H:%I:%S"
+[pretty]
+	barry = format:%C(auto)%h%C(reset) %s (%C(cyan)%aL%C(reset) %ad)
+[pull]
+	rebase = false
